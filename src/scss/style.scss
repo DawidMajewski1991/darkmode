@@ -1,0 +1,181 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@mixin siteBorder {
+    border: 2px solid darkorange;
+    border-radius: 2px;
+}
+
+:root {
+    --background-color: rgb(255, 255, 255);
+    --block-color: rgb(212, 212, 212);
+    --text-color: black;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.main {
+    color: var(--background-color);
+    background-color: var(--background-color);
+    &__header {
+        font-size: 32px;
+    }
+    &__title {
+        color: var(--text-color);
+        padding: 32px;
+        margin: 0;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}
+
+.diary {
+    display: grid;
+    max-width: 1440px;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 16px;
+    padding: 32px;
+    margin: auto;
+}
+
+.article {
+    @include siteBorder;
+    min-height: 400px;
+    background-color: var(--block-color);
+    &__title {
+        padding: 16px 24px;
+        background-color: var(--block-color);
+        color: var(--text-color);
+        font-size: 24px;
+        text-decoration:underline;
+    }
+    &__text {
+        padding-left: 48px;
+        font-size: var(--text-size);
+        color: var(--text-color);
+    }
+}
+
+
+
+.gridbox {
+    display: grid;
+    justify-content: space-around;
+    justify-items: left;
+    background-color: rgb(20, 6, 53);
+    &__title {
+        padding-top: 20px;
+        text-align: left;
+        letter-spacing: 1px;
+        color: rgb(242, 247, 255);
+    }
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 16px;
+    padding-bottom: 32px;
+    &__textarea {
+        min-width: 500px;
+        min-height: 200px;
+        border-radius: 8px;
+        padding: 16px;
+    }
+    &__load {
+        background-color: rgb(0, 88, 160);
+        color: white;
+        padding: 8px;
+        border-radius: 8px;
+    }
+    &__save {
+        background-color: rgb(0, 139, 0);
+        color: white;
+        padding: 8px;
+        border-radius: 8px;
+    }
+    &__clear {
+        background-color: rgb(255, 174, 0);
+        color: rgb(0, 0, 0);
+        padding: 8px;
+        border-radius: 8px;
+    }
+}
+
+.repobox {
+    color: rgb(255, 255, 255);
+    background-color: rgb(24, 3, 41);
+    &__title {
+        margin: 0;
+        padding: 20px;
+    }
+    &__placeholder {
+        display: grid;
+        margin: 0;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    &__item {
+        padding: 20px;
+        list-style-type: none;
+        text-transform: capitalize;
+    }
+    &__link {
+        color: rgb(194, 243, 255);
+        text-decoration: none;
+    }
+}
+
+.hydrapp {
+    background-color: rgb(0, 163, 228);
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    &__title {
+        margin: 0;
+        padding: 100px 0 80px 0;
+        font-size: 80px;
+    }
+    &__label {
+        font-size: 24px;
+    }
+    &__digit {
+        font-size: 100px;
+        margin: 50px 0 80px 0;
+    }
+    &__button {
+        min-width: 300px;
+        padding: 12px;
+        background: green;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+    &__remove {
+        min-width: 300px;
+        padding: 12px;
+        background: orange;
+        color: black;
+        border: none;
+        border-radius: 10px;
+        margin-bottom: 100px;
+    }
+}
+
+.footer {
+    background-color: black;
+    &__text {
+        padding: 20px;
+        margin: 0;
+    }
+}

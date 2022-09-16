@@ -18,7 +18,7 @@
     />
 
     <!-- uncomment the line below to enable PWA  -->
-    <!-- <link rel="manifest" href="manifest.json" /> -->
+    <link rel="manifest" href="manifest.json" />
 
     <link
       rel="apple-touch-icon"
@@ -145,9 +145,59 @@
     />
   </head>
   <body>
-    <div class="hello">
-      <img class="hello__logo" src="../assets/img/logo.svg" alt="WTF " />
-      <span class="hello__circles"></span>
-    </div>
+    <header></header>
+
+    <main class="main">
+      <header class="main__header">
+        <h1 class="main__title">Homesite</h1>
+      </header>
+      <div class="diary">
+        <article class="article">
+          <h2 class="article__title">Co to jest HTML?</h2>
+          <p class="article__text">HTML to język znaczników.</p>
+        </article>
+        <article class="article">
+          <h2 class="article__title">Co to jest CSS.</h2>
+          <p class="article__text">CSS są to arkusze stylów.</p>
+        </article>
+      </div>
+      <div class="diary">
+        <article class="article">
+          <h2 class="article__title">Jak działa JS?</h2>
+          <p class="article__text">
+            JS jest językiem programowania i oparty jest na logice.
+          </p>
+        </article>
+        <article class="article">
+          <h2 class="article__title">Co jeszcze trzeba umieć?</h2>
+          <p class="article__text">Warto znać np. Reacta.</p>
+        </article>
+      </div>
+      <section class="gridbox">
+        <h2 class="gridbox__title">Text editor</h2>
+        <p class="form">
+          <textarea class="form__textarea form__textarea--js">434343</textarea>
+          <button class="form__load load--js">load</button>
+          <button class="form__save save--js">save</button>
+          <button class="form__clear clear--js">clear</button>
+        </p>
+      </section>
+      <section class="repobox">
+        <h2 class="repobox__title">Ropozytoria</h2>
+        <ul class="repobox__placeholder repobox__placeholder--js"></ul>
+      </section>
+      <section class="hydrapp">
+        <h2 class="hydrapp__title">hydrapp</h2>
+        <p class="hydrapp__label">Szklanek:</p><p class="hydrapp__digit hydrapp__digit--js"></p>
+        <button class="hydrapp__button hydrapp__button--js">dodaj szklankę</button>
+        <button class="hydrapp__remove hydrapp__remove--js">usuń szklankę</button>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__text">To jest strona do ćwiczeń.</p>
+      <input class="entry--js" />
+      <button class="action--js">Zapisz</button>
+      <button class="mode--js">Darkmode</button>
+    </footer>
   </body>
 </html>
